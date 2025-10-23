@@ -44,6 +44,14 @@ const CHALLENGE_COMMAND = {
   contexts: [0, 2],
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND];
+const DICE_COMMAND = {
+  name: 'dice',
+  description: 'throw a dice and randomly get a number from 1-6',
+  type: 1,
+  integration_types: [0, 1],
+  contexts: [0, 2],
+};
+
+const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND, DICE_COMMAND];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
